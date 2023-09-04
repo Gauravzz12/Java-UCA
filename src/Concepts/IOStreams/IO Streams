@@ -1,0 +1,17 @@
+Streams Support many different kind of data ,including simple bytes,primitive data types,localised characters and objects.
+Some streams only pass on data others manipulate and transform data in useful ways. 
+
+A stream is a sequence of data.
+A program uses input stream to read data from a source, one item at a time.
+A program uses an output stream to write data to a destination, one item at a time.
+
+Types of I/O Streams : 
+1)Unbuffered I/O Streams (Data Stream,Object Stream)(Less Efficient)
+2)Buffered I/O Streams (Byte Stream,Character Stream)(Best to use)
+
+OR
+
+1)Byte Streams - Used to read and write a single byte (8 bits) of data.All Byte stream classes are derived from abstract classes called Input Stream and Output Stream
+2)Character Streams - Used to read and write a single character of data.All Character stream classes are derived from abstract classes called Reader and Writer.
+3)Data Streams-
+4)Object Streams

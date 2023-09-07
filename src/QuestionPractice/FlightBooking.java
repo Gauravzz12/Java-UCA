@@ -7,12 +7,10 @@ import Concepts.stringbuffer;
 public class FlightBooking {
     private String flightNo;
     private String flightName;
-
     public FlightBooking(String flightNo, String flightName) {
         this.flightName = flightName;
         this.flightNo = flightNo;
     }
-
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         int flightNumber=0;
@@ -21,14 +19,13 @@ public class FlightBooking {
             System.out.println("Enter Flight Number  ");
             String flightNo = in.nextLine().trim();
             System.out.println("Enter Flight Name : ");
+            flightName = in.nextLine().trim();
+
             if (flightNo.isEmpty() || flightName.isEmpty()) {
                 throw new IllegalArgumentException("Flight number and name cannot be empty.");
             }
-            flightName = in.nextLine().trim();
             flightNumber = Integer.parseInt(flightNo);
             String nameCheck="";
-            
-            
             for(int i=0;i<flightName.length();i++) {
             	nameCheck+=flightName.charAt(i);
             	int parsecheck=0;
@@ -42,10 +39,6 @@ public class FlightBooking {
 				}
             	nameCheck="";
             }
-           
-           
-				
-			
             FlightBooking obj = new FlightBooking(flightNo, flightName);
             System.out.println("Flight Number : " + flightNumber + " Flight Name  : "+ flightName);
         
@@ -58,11 +51,7 @@ public class FlightBooking {
         catch (IllegalArgumentException e) {
             System.out.println("FlightNumber or FlightName cannot be Empty");
         }
-         catch (Exception e) {
-            System.out.println("Caught Exception: " + e.getMessage());
-        } finally {
-            in.close(); 
-        }
+         
         
     
     }
